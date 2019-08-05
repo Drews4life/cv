@@ -102,6 +102,9 @@ body {
     font-size: 5.5rem; }
   .heading-primary--white {
     color: #FFFFFF; }
+  @media (max-width: 400px) {
+    .heading-primary {
+      font-size: 3.5rem; } }
 
 .heading-secondary {
   font-size: 2.2rem;
@@ -118,6 +121,9 @@ body {
     color: #22A39F;
     font-size: 2.8rem;
     margin-bottom: 2rem; }
+  @media (max-width: 400px) {
+    .heading-secondary {
+      font-size: 2rem; } }
 
 .paragraph {
   color: #434242;
@@ -148,6 +154,9 @@ body {
   justify-content: center;
   align-items: flex-start;
   grid-column-gap: 3.5rem; }
+  @media (max-width: 750px) {
+    .contact {
+      grid-template-columns: 1fr; } }
   .contact__list {
     list-style: none; }
   .contact__item {
@@ -156,6 +165,14 @@ body {
     text-align: center; }
     .contact__item:not(:first-child) {
       margin-top: 2rem; }
+      @media (max-width: 750px) {
+        .contact__item:not(:first-child) {
+          margin-top: 0; } }
+    @media (max-width: 750px) {
+      .contact__item {
+        justify-content: left;
+        margin-top: 1rem !important;
+        margin-right: 3rem; } }
   .contact__link:link, .contact__link:visited {
     text-decoration: none;
     color: #F3EFE0;
@@ -164,6 +181,9 @@ body {
     justify-content: center;
     align-items: center;
     transition: all .3s ease-in-out; }
+    @media (max-width: 950px) {
+      .contact__link:link, .contact__link:visited {
+        font-size: 1.4rem; } }
   .contact__item:hover .contact__link:link, .contact__link:visited {
     color: rgba(243, 239, 224, 0.6); }
   .contact__image {
@@ -213,6 +233,9 @@ body {
     @media (max-width: 950px) {
       .abilities__item {
         font-size: 1.6rem; } }
+    @media (max-width: 350px) {
+      .abilities__item {
+        font-size: 1.45rem; } }
   .abilities__star {
     display: inline-block;
     font-size: 2rem;
@@ -227,6 +250,9 @@ body {
     @media (max-width: 950px) {
       .abilities__star {
         font-size: 1.8rem; } }
+    @media (max-width: 350px) {
+      .abilities__star {
+        font-size: 1.5rem; } }
   .abilities__item:hover > * > * {
     transform: scale(1.1);
     margin-left: .3rem; }

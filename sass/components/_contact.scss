@@ -5,6 +5,11 @@
  
     @include defaultGrid {
         grid-column-gap: 3.5rem;
+
+        @include mq(extra-medium) {
+            grid-template-columns: 1fr;
+
+        }
     }
 
     &__list { 
@@ -14,12 +19,22 @@
     &__item {
         &:not(:first-child) {
             margin-top: 2rem;
+
+            @include mq(extra-medium) {
+                margin-top: 0;
+            }
         }
+
         // background-color: red;
         display: flex;
-        // justify-content: center;
         align-items: center;
         text-align: center;
+
+        @include mq(extra-medium) {
+            justify-content: left;
+            margin-top: 1rem !important;
+            margin-right: 3rem;
+        }
     }
 
     &__link {
@@ -33,6 +48,10 @@
             justify-content: center;
             align-items: center;
             transition: all .3s ease-in-out;
+            
+            @include mq(big) {
+                font-size: 1.4rem;
+            }
         }  
     }
 

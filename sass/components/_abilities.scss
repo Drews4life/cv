@@ -51,6 +51,10 @@
         @include mq(big) {
             font-size: 1.6rem;
         }
+
+        @include mq(medium-mobile) {
+            font-size: 1.45rem;
+        }
     }
 
 
@@ -68,8 +72,13 @@
         @include mq(extra-large) {
             font-size: 1.7rem;
         }
+
         @include mq(big) {
             font-size: 1.8rem;
+        }
+
+        @include mq(medium-mobile) {
+            font-size: 1.5rem;
         }
     }
 

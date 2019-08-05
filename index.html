@@ -879,5 +879,23 @@
 </body>
 
 <script src="/js/index.js"></script>
+<script>
 
+window.addEventListener("scroll", function (event) {
+    
+    var docWidth = document.documentElement.offsetWidth;
+
+    [].forEach.call(
+    document.querySelectorAll('*'),
+    function(el) {
+        if (el.offsetWidth > docWidth) {
+        console.log(el);
+        }
+    }
+    );
+
+});
+
+        
+</script>
 </html>

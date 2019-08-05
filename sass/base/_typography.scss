@@ -31,6 +31,10 @@ body {
 
     &--white { color: $color-white; }
 
+
+    @include mq(big-mobile) {
+        font-size: 3.5rem;
+    }
 } 
 
 .heading-secondary {
@@ -52,6 +56,10 @@ body {
         color: $color-turquoise;
         font-size: 2.8rem;
         margin-bottom: 2rem;
+    }
+
+    @include mq(big-mobile) {
+        font-size: 2rem;
     }
 }
 
