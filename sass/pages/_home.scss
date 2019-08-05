@@ -1,0 +1,46 @@
+
+
+.section {
+    
+    &-introduction {
+        display: block;
+        position: relative;
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-turquoise, 0.6),
+            rgba($color-turquoise, 0.8)
+        ), url(../img/back.png);
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: right;
+        width: 100%;
+        height: 100vh;
+    }
+
+    &-profile {
+        // height: 80rem;
+        width: 100%;
+        background-color: $color-white;
+        @include sectionFlex;
+        padding: 10rem 0;
+
+        &-2 { background-color: orangered }
+    }
+
+    &-experiences {
+        background-color: $color-sand;
+        @include sectionFlex;
+    }
+
+    &-abilities {
+        background-color: $color-white;
+        @include sectionFlex;
+    }
+
+    &-contact {
+        background-color: $color-dark-gray;
+        height: 40vh;
+        @include sectionFlex;
+    }
+}

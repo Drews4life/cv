@@ -1,0 +1,93 @@
+
+
+.navigation {
+    position: absolute;
+    top: 100vh;
+    right: 6.5rem;
+    background-color: $color-black;
+
+    @include mq(big) {
+        right: 4.5rem;
+    }
+
+    @include mq(pre-big) {
+        right: 2rem;
+    }
+
+    @include mq(extra-medium) {
+        display: none;
+        right: 0;
+        left: 0;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        height: 8rem;
+        width: 10.5rem;        
+    }
+
+    &__link {
+        background-color: $color-black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white; 
+
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-gray;
+        }
+
+        &:focus,
+        &:active {
+            color: $color-white;
+            background-color: $color-turquoise;
+        }
+
+        &--single {
+            position: absolute;
+            bottom: 0;
+            right: 6.5rem;
+            height: 8rem;
+            width: 10.5rem;
+
+            background-color: $color-black !important;
+
+            span {
+                color: white;
+                font-size: 4rem;
+                animation: moveInOut .5s ease-in-out infinite;
+            }
+            
+            @include mq(big) {
+                right: 4.5rem;
+            }
+
+            @include mq(pre-big) {
+                right: 2rem;
+            }
+
+            @include mq(extra-medium) {
+                right: 0;
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+.fixed-navigation {
+    position: fixed;
+    top: 3rem;
+}
+

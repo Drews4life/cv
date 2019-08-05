@@ -1,0 +1,59 @@
+
+
+.experiences {
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    // background-color: orangered;
+
+    &__container {
+        &:not(:first-of-type) {
+            margin-top: 4rem;
+        }
+
+        width: 100%;
+
+        @include defaultGrid() {
+            @include mq(big) {
+                grid-template-columns: 1fr;
+            }
+        };
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $color-dark-gray;
+
+        & + p {
+            font-size: 1.5rem;
+            color: $color-dark-gray;
+        }
+    }
+
+    &__paragraph {
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: $color-dark-gray;
+
+        span {
+            font-weight: 300;    
+        }
+
+        span:last-child {
+            color: $color-turquoise;
+            font-weight: 400;
+        }
+
+        strong {
+            display: block;
+            // margin-bottom: .01rem;
+        }
+
+        @include mq(big) {
+            margin-top: 1.5rem;
+        }
+    }
+
+}

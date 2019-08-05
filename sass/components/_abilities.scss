@@ -1,0 +1,85 @@
+
+
+.abilities {
+
+    &:not(:first-of-type) {
+        margin-top: 4rem;
+    }
+
+    width: 60vw;
+
+    &__modified-experience {
+        @include mq(extra-medium) {
+            width: 90vw !important;
+        }
+    }
+
+    @include mq(extra-medium) {
+        width: 100%;
+    }
+ 
+    @include defaultGrid {
+        grid-column-gap: 3.5rem;
+
+        @include mq(big) {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    &__list {
+        font-size: 1.5rem;
+        color: $color-dark-gray;
+        width: 100%;
+    }
+
+    &__item {
+        font-size: 1.8rem;
+        color: $color-dark-gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .3rem;
+
+        @include mq(extra-large) {
+            font-size: 1.45rem;
+        }
+
+        @include mq(large) {
+            font-size: 1.4rem;
+        }
+
+        @include mq(big) {
+            font-size: 1.6rem;
+        }
+    }
+
+
+    &__star {
+        display: inline-block;
+        font-size: 2rem;
+        color: rgba($color-light-gray, .4);
+        transition: all .3s ease-in-out;
+        width: fit-content;
+
+        &--filled {
+            color: $color-turquoise;
+        }
+
+        @include mq(extra-large) {
+            font-size: 1.7rem;
+        }
+        @include mq(big) {
+            font-size: 1.8rem;
+        }
+    }
+
+
+    &__item:hover > * > *  {
+        transform: scale(1.1);
+        margin-left: .3rem;
+    }
+
+    &__item:hover {
+        background-color: rgba($color-light-gray, .1);
+    }
+}

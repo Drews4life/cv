@@ -1,0 +1,52 @@
+
+
+.contact {
+    width: 60vw;
+ 
+    @include defaultGrid {
+        grid-column-gap: 3.5rem;
+    }
+
+    &__list { 
+        list-style: none;
+    }
+
+    &__item {
+        &:not(:first-child) {
+            margin-top: 2rem;
+        }
+        // background-color: red;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $color-sand;
+            font-size: 1.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .3s ease-in-out;
+        }  
+    }
+
+    &__item:hover &__link:link, &__link:visited {
+        color: rgba($color-sand, 0.6);
+    }
+
+    &__image {
+        margin-right: 1rem;
+        background-color: rgba(black, .05);
+        border-radius: 50%;
+
+        &--no_radius {
+            border-radius: 0%;
+        }
+    }
+}

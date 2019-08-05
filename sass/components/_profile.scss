@@ -1,0 +1,46 @@
+
+
+.profile {
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: repeat(1, auto);
+    grid-column-gap: 5rem;
+
+    justify-content: center;
+    align-items: flex-start;
+    align-self: center;
+    
+    padding-top: 3rem;
+
+    @include mq(big) {
+        grid-template-columns: 50%;
+        align-items: center;
+    }
+    
+    &__separator {
+        width: 48%;
+        opacity: .3;
+
+        @include mq(extra-medium) {
+            width: 90vw !important;
+        }
+    }
+
+    &__about {
+        @include mq(big) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+
+        &--image {
+            width: 24.6rem;
+            height: 24.6rem;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: bottom right;
+        }
+    }
+}

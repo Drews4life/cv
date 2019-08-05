@@ -1,0 +1,61 @@
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-white;
+}
+
+
+.heading-primary {
+
+    font-size: 5.5rem;
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+
+    &__introduction {
+        font-weight: 800;
+        border-bottom: solid .5px $color-white;
+
+        animation-name: moveFromLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+
+    &__profile {
+        color: $color-turquoise;
+        font-weight: 300;
+        font-size: 5.5rem;
+    }
+
+    &--white { color: $color-white; }
+
+} 
+
+.heading-secondary {
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-align: center;
+
+    animation-name: moveFromRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    &__gray {
+        color: $color-light-gray;
+    }
+
+    &__turquoise {
+        text-align: left;
+        align-self: flex-start;
+        color: $color-turquoise;
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.paragraph {
+    color: $color-dark-gray;
+    font-size: 1.75rem;
+}
