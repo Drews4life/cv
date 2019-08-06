@@ -5,6 +5,8 @@
     top: 100vh;
     right: 6.5rem;
     background-color: $color-black;
+    z-index: 1000;
+    
 
     @include mq(big) {
         right: 4.5rem;
@@ -15,18 +17,36 @@
     }
 
     @include mq(extra-medium) {
-        display: none;
         right: 0;
         left: 0;
+        width: 0;
+        height: 0;
     }
 
     &__list {
         list-style: none;
+        
+        @include mq(extra-medium) {
+            transition: height .5s ease-in-out;
+            // display: none;
+            height: 0;
+        }
     }
 
     &__item {
         height: 8rem;
-        width: 10.5rem;        
+        width: 10.5rem;   
+        
+        @include mq(extra-medium) {
+            transition: height .5s ease-in-out;
+            width: 100vw;
+            height: 0;
+
+            & * {
+                transition: opacity .5s ease-in-out;
+                opacity: 0;
+            }
+        }
     }
 
     &__link {
@@ -48,8 +68,13 @@
             color: $color-gray;
         }
 
+        &--chosen:hover {
+            color: $color-black;
+        }
+
         &:focus,
-        &:active {
+        &:active,
+        &--chosen {
             color: $color-white;
             background-color: $color-turquoise;
         }
@@ -84,10 +109,77 @@
         }
     }
 
+
+    &__menu {
+        display: none;
+        height: 0;
+        width: 0;
+        
+        @include mq(extra-medium) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 5rem;
+            width: 100vw;
+            background-color: $color-black;
+            transition: height .3s ease-in-out;
+            padding: 1rem;
+        }
+    }
+
+    &__button-open {
+        // align-self: flex-end;
+        width: 5rem;
+        height: 4rem;
+        background-color: #ddd;
+        border: none;
+        margin-right: 3rem;
+        border-radius: 1rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    
+
+    &__icon-bar {
+        width: 3rem;
+        height: 2px;
+        display: block;
+        border-radius: 1px;
+        background-color: #222222;
+        margin: .23rem;
+    }
+
 }
 
 .fixed-navigation {
     position: fixed;
     top: 3rem;
+
+    @include mq(extra-medium) {
+        top: 0;
+    }
 }
 
+.open-navigation {
+
+    & .navigation__list {
+        // opacity: 1;
+        // display: inline;
+        height: auto;
+    }
+
+    & .navigation__item {
+        height: 8rem;
+
+        & * {
+            opacity: 1;
+        }
+    }   
+}

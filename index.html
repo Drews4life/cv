@@ -15,26 +15,33 @@
 <body>
 
     <nav class="navigation" id='navigation'>
+        <div class="navigation__menu">
+            <button class="navigation__button-open" id="open-menu">
+                <span class="navigation__icon-bar"></span>
+                <span class="navigation__icon-bar"></span>
+                <span class="navigation__icon-bar"></span>
+            </button>
+        </div>
         <ul class="navigation__list">
             <li class="navigation__item">
-                <a href="#profile" id="profile" class="navigation__link">Profile</a>
+                <a href="#profile"  class="navigation__link" id="a-profile">Profile</a>
             </li>
             <li class="navigation__item">
-                <a href="#experience" id="experience" class="navigation__link">Experience</a>
+                <a href="#experience"  class="navigation__link" id="a-experience">Experience</a>
             </li>
             <li class="navigation__item">
-                <a href="#abilities" id="abilities" class="navigation__link">Abilities</a>
+                <a href="#abilities"  class="navigation__link" id="a-abilities">Abilities</a>
             </li>
             <!-- <li class="navigation__item">
-                <a href="#projects" id="projects" class="navigation__link">Projects</a>
+                <a href="#projects" id="projects" class="navigation__link" id="a-projects">Projects</a>
             </li> -->
             <li class="navigation__item">
-                <a href="#contact" id="contact" class="navigation__link">Contact</a>
+                <a href="#contact"  class="navigation__link" id="a-contact">Contact</a>
             </li>
         </ul>
     </nav>
 
-    <main>
+    
         <section class="section-introduction" id="introduction">
             <div class="introduction-container">
                 <h2 class="heading-primary heading-primary__introduction">Andrii Zakharenkov</h2>
@@ -64,7 +71,7 @@
                 </div>
 
                 <div class="profile__wrapper">
-                    <img src="./img/face.jpg" alt="img" class="profile__wrapper--image">
+                    <img src="./img/face2.jpg" alt="img" class="profile__wrapper--image">
                 </div>
 
                 <div class="profile__details">
@@ -105,10 +112,7 @@
                             <strong>Cybersecurity speacialist</strong>
                             <br>
                             <span>
-                                Gamification is the application of game elements and digital game design techniques to
-                                non-game problems, such as business and social impact challenges. This course thought me
-                                about the mechanisms of gamification, why it has such tremendous potential, and how to
-                                use it effectively.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur et assumenda ipsa placeat blanditiis omnis perspiciatis minima dicta officia ipsum accusantium in culpa esse necessitatibus, ducimus quis, cumque aperiam doloremque!
                             </span>
                             <br>
                             <span class="experiences__location">&#8620; Ukraine, Kyiv</span>
@@ -133,10 +137,7 @@
                             <strong>React-Native / Swift Developer</strong>
                             <br>
                             <span>
-                                Gamification is the application of game elements and digital game design techniques to
-                                non-game problems, such as business and social impact challenges. This course thought me
-                                about the mechanisms of gamification, why it has such tremendous potential, and how to
-                                use it effectively.
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe dolores consequatur quod, ullam repudiandae similique culpa consequuntur vitae recusandae magnam alias, reiciendis expedita numquam delectus, veritatis deserunt perspiciatis sunt odit.
                             </span>
                             <br>
                             <span class="experiences__location">&#8620; Ukraine, Kyiv</span>
@@ -155,10 +156,7 @@
                             <strong>ReactJS/React-Native Developer</strong>
                             <br>
                             <span>
-                                Gamification is the application of game elements and digital game design techniques to
-                                non-game problems, such as business and social impact challenges. This course thought me
-                                about the mechanisms of gamification, why it has such tremendous potential, and how to
-                                use it effectively.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ratione debitis sit harum, quo rerum sequi accusantium ipsa quaerat quas suscipit! Sed aut necessitatibus quia harum amet excepturi tenetur quos!
                             </span>
                             <br>
                             <span class="experiences__location">&#8620; Ukraine, Kyiv</span>
@@ -177,10 +175,7 @@
                             <strong>ReactJS Developer</strong>
                             <br>
                             <span>
-                                Gamification is the application of game elements and digital game design techniques to
-                                non-game problems, such as business and social impact challenges. This course thought me
-                                about the mechanisms of gamification, why it has such tremendous potential, and how to
-                                use it effectively.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ullam id atque veniam, adipisci inventore aliquid optio voluptatem, repellendus, aperiam porro quaerat quam suscipit sed necessitatibus natus fuga molestias quo?
                             </span>
                             <br>
                             <span class="experiences__location">&#8620; Ukraine, Kyiv</span>
@@ -875,27 +870,7 @@
             <hr class="profile__separator" style="width: 60%;">
         </section>
 
-    </main>
 </body>
 
-<script src="/js/index.js"></script>
-<script>
-
-window.addEventListener("scroll", function (event) {
-    
-    var docWidth = document.documentElement.offsetWidth;
-
-    [].forEach.call(
-    document.querySelectorAll('*'),
-    function(el) {
-        if (el.offsetWidth > docWidth) {
-        console.log(el);
-        }
-    }
-    );
-
-});
-
-        
-</script>
+<script src="js/index.js"></script>
 </html>

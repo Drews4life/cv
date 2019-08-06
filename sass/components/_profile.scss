@@ -20,6 +20,7 @@
     &__separator {
         width: 48%;
         opacity: .3;
+        z-index: 500;
 
         @include mq(extra-medium) {
             width: 90vw !important;
