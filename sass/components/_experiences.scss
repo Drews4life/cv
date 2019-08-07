@@ -7,12 +7,22 @@
     width: 60%;
     // background-color: orangered;
 
+    @include mq(big-mobile) {
+        align-self: flex-start;
+        margin: 5rem 0;
+        width: 90%;
+    }
+
     &__container {
         &:not(:first-of-type) {
             margin-top: 4rem;
         }
 
         width: 100%;
+
+        @include mq(big-mobile) {
+            margin-top: 2rem;
+        }
 
         @include defaultGrid() {
             @include mq(big) {
@@ -37,8 +47,20 @@
         font-size: 1.8rem;
         color: $color-dark-gray;
 
+        & br {
+            @include mq(big-mobile) {
+                display: none;
+            }
+        }
+
         span {
-            font-weight: 300;    
+            font-weight: 300;   
+            
+            &:not(:last-child) {
+                @include mq(big-mobile) {
+                    display: none;
+                }
+            }
         }
 
         span:last-child {
@@ -53,6 +75,10 @@
 
         @include mq(big) {
             margin-top: 1.5rem;
+        }
+
+        @include mq(big-mobile) {
+            margin-top: 2rem;
         }
     }
 

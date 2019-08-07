@@ -16,6 +16,15 @@
         grid-template-columns: 50%;
         align-items: center;
     }
+
+    @include mq(extra-medium) {
+        grid-template-columns: 85%;
+
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+    }
     
     &__separator {
         width: 48%;
@@ -31,6 +40,12 @@
         @include mq(big) {
             margin-bottom: 3rem;
         }
+
+        @include mq(extra-medium) {
+            * {
+                text-align: center;
+            }
+        }
     }
 
     &__wrapper {
@@ -42,6 +57,14 @@
             border-radius: 50%;
             object-fit: cover;
             object-position: bottom right;
+        }
+    }
+
+    &__details {
+        @include mq(extra-medium) {
+            * {
+                text-align: center;
+            }
         }
     }
 }

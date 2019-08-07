@@ -158,6 +158,9 @@ body {
   @media (max-width: 750px) {
     .contact {
       grid-template-columns: 1fr; } }
+  @media (max-width: 400px) {
+    .contact__parent-grid {
+      margin: .5rem !important; } }
   .contact__list {
     list-style: none; }
   .contact__item {
@@ -207,7 +210,7 @@ body {
     margin-top: 4rem; }
   @media (max-width: 750px) {
     .abilities__modified-experience {
-      width: 90vw !important; } }
+      width: 100% !important; } }
   @media (max-width: 750px) {
     .abilities {
       width: 100%; } }
@@ -253,7 +256,7 @@ body {
         font-size: 1.8rem; } }
     @media (max-width: 350px) {
       .abilities__star {
-        font-size: 1.5rem; } }
+        font-size: 1.45rem; } }
   .abilities__item:hover > * > * {
     transform: scale(1.1);
     margin-left: .3rem; }
@@ -265,6 +268,11 @@ body {
   display: flex;
   flex-direction: column;
   width: 60%; }
+  @media (max-width: 400px) {
+    .experiences {
+      align-self: flex-start;
+      margin: 5rem 0;
+      width: 90%; } }
   .experiences__container {
     width: 100%;
     display: grid;
@@ -275,6 +283,9 @@ body {
     align-items: flex-start; }
     .experiences__container:not(:first-of-type) {
       margin-top: 4rem; }
+    @media (max-width: 400px) {
+      .experiences__container {
+        margin-top: 2rem; } }
     @media (max-width: 950px) {
       .experiences__container {
         grid-template-columns: 1fr; } }
@@ -289,8 +300,14 @@ body {
     font-weight: 700;
     font-size: 1.8rem;
     color: #434242; }
+    @media (max-width: 400px) {
+      .experiences__paragraph br {
+        display: none; } }
     .experiences__paragraph span {
       font-weight: 300; }
+      @media (max-width: 400px) {
+        .experiences__paragraph span:not(:last-child) {
+          display: none; } }
     .experiences__paragraph span:last-child {
       color: #22A39F;
       font-weight: 400; }
@@ -299,6 +316,9 @@ body {
     @media (max-width: 950px) {
       .experiences__paragraph {
         margin-top: 1.5rem; } }
+    @media (max-width: 400px) {
+      .experiences__paragraph {
+        margin-top: 2rem; } }
 
 .navigation {
   position: absolute;
@@ -316,7 +336,7 @@ body {
     .navigation {
       right: 0;
       left: 0;
-      width: 0;
+      width: 100%;
       height: 0; } }
   .navigation__list {
     list-style: none; }
@@ -365,6 +385,10 @@ body {
         color: white;
         font-size: 4rem;
         animation: moveInOut .5s ease-in-out infinite; }
+        @media (max-width: 750px) {
+          .navigation__link--single span {
+            opacity: 1;
+            font-size: 5rem; } }
       @media (max-width: 950px) {
         .navigation__link--single {
           right: 4.5rem; } }
@@ -373,8 +397,9 @@ body {
           right: 2rem; } }
       @media (max-width: 750px) {
         .navigation__link--single {
-          right: 0;
-          width: 100%; } }
+          right: 0 !important;
+          left: 0 !important;
+          width: 100% !important; } }
   .navigation__menu {
     display: none;
     height: 0;
@@ -385,10 +410,9 @@ body {
         justify-content: flex-end;
         align-items: center;
         height: 5rem;
-        width: 100vw;
+        width: 100%;
         background-color: #222222;
-        transition: height .3s ease-in-out;
-        padding: 1rem; } }
+        transition: height .3s ease-in-out; } }
   .navigation__button-open {
     width: 5rem;
     height: 4rem;
@@ -448,6 +472,12 @@ body {
     .profile {
       grid-template-columns: 50%;
       align-items: center; } }
+  @media (max-width: 750px) {
+    .profile {
+      grid-template-columns: 85%; }
+      .profile h3 {
+        font-size: 2.5rem;
+        font-weight: 500; } }
   .profile__separator {
     width: 48%;
     opacity: .3;
@@ -458,6 +488,9 @@ body {
   @media (max-width: 950px) {
     .profile__about {
       margin-bottom: 3rem; } }
+  @media (max-width: 750px) {
+    .profile__about * {
+      text-align: center; } }
   .profile__wrapper {
     margin: 0 auto; }
     .profile__wrapper--image {
@@ -466,6 +499,9 @@ body {
       border-radius: 50%;
       object-fit: cover;
       object-position: bottom right; }
+  @media (max-width: 750px) {
+    .profile__details * {
+      text-align: center; } }
 
 .section-introduction {
   display: block;

@@ -12,6 +12,12 @@
         }
     }
 
+    &__parent-grid {
+        @include mq(big-mobile) {
+            margin: .5rem !important;
+        }
+    }
+
     &__list { 
         list-style: none;
     }

@@ -75,7 +75,7 @@
                 </div>
 
                 <div class="profile__details">
-                    <h3 class="heading-secondary heading-secondary__turquoise">Details</h3>
+                    <h3 class="heading-secondary heading-secondary__turquoise u-margin-top-medium">Details</h3>
                     <p class="paragraph">
                         <strong>Name:</strong>
                         <br>
@@ -401,8 +401,7 @@
                             </li>
 
                             <li class="abilities__item">
-                                <span class="abilities__skill">Object Oriented Programming</span>
-
+                                <span class="abilities__skill">OOP</span>
                                 <span class="abilities__score">
                                     <span class="abilities__star abilities__star--filled">
                                         &#9733;
@@ -422,10 +421,33 @@
                                 </span>
 
                             </li>
-
+<!-- 
 
                             <li class="abilities__item">
-                                <span class="abilities__skill">Multithreaded Programming</span>
+                                <span class="abilities__skill">Multithreaded<br>Programming</span>
+
+                                <span class="abilities__score">
+                                    <span class="abilities__star abilities__star--filled">
+                                        &#9733;
+                                    </span>
+                                    <span class="abilities__star abilities__star--filled">
+                                        &#9733;
+                                    </span>
+                                    <span class="abilities__star abilities__star--filled">
+                                        &#9733;
+                                    </span>
+                                    <span class="abilities__star">
+                                        &#9733;
+                                    </span>
+                                    <span class="abilities__star">
+                                        &#9733;
+                                    </span>
+                                </span>
+
+                            </li> -->
+
+                            <li class="abilities__item">
+                                <span class="abilities__skill">FP</span>
 
                                 <span class="abilities__score">
                                     <span class="abilities__star abilities__star--filled">
@@ -448,27 +470,27 @@
                             </li>
 
                             <li class="abilities__item">
-                                <span class="abilities__skill">Functional Programming</span>
-
-                                <span class="abilities__score">
-                                    <span class="abilities__star abilities__star--filled">
-                                        &#9733;
+                                    <span class="abilities__skill">NextJS</span>
+    
+                                    <span class="abilities__score">
+                                        <span class="abilities__star abilities__star--filled">
+                                            &#9733;
+                                        </span>
+                                        <span class="abilities__star abilities__star--filled">
+                                            &#9733;
+                                        </span>
+                                        <span class="abilities__star abilities__star--filled">
+                                            &#9733;
+                                        </span>
+                                        <span class="abilities__star">
+                                            &#9733;
+                                        </span>
+                                        <span class="abilities__star">
+                                            &#9733;
+                                        </span>
                                     </span>
-                                    <span class="abilities__star abilities__star--filled">
-                                        &#9733;
-                                    </span>
-                                    <span class="abilities__star abilities__star--filled">
-                                        &#9733;
-                                    </span>
-                                    <span class="abilities__star">
-                                        &#9733;
-                                    </span>
-                                    <span class="abilities__star">
-                                        &#9733;
-                                    </span>
-                                </span>
-
-                            </li>
+    
+                                </li>
                             <li class="abilities__item">
                                 <span class="abilities__skill">NodeJS</span>
 
@@ -833,7 +855,7 @@
             </h2>
             <hr class="profile__separator" style="width: 60%;">
 
-            <div class="experiences">
+            <div class="experiences contact__parent-grid">
                 <div class="contact">
                     <div>
                         <ul class="contact__list">
@@ -873,4 +895,15 @@
 </body>
 
 <script src="js/index.js"></script>
+<script>
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);</script>
 </html>

@@ -10,8 +10,12 @@
 
     &__modified-experience {
         @include mq(extra-medium) {
-            width: 90vw !important;
+            width: 100% !important;
         }
+
+        // @include mq(extra-medium) {
+        //     width: 90vw !important;
+        // }
     }
 
     @include mq(extra-medium) {
@@ -78,7 +82,7 @@
         }
 
         @include mq(medium-mobile) {
-            font-size: 1.5rem;
+            font-size: 1.45rem;
         }
     }
 
