@@ -1,6 +1,7 @@
 
 
 .navigation {
+    
     position: absolute;
     top: 100vh;
     right: 6.5rem;
@@ -138,10 +139,10 @@
         // align-self: flex-end;
         width: 5rem;
         height: 4rem;
-        background-color: #ddd;
+        background-color: transparent;
         border: none;
         margin-right: 3rem;
-        border-radius: 1rem;
+        // border-radius: 1rem;
         
         display: flex;
         flex-direction: column;
@@ -151,23 +152,46 @@
         &:focus {
             outline: none;
         }
+
+        transition: all .1s ease-in;
+    }
+
+    &__button-open:hover {
+        transform: translateY(-3px);
+    }
+
+    &__button-open:active {
+        transform: scale(1.1) translateY(-3px);
     }
     
 
     &__icon-bar {
         width: 3rem;
-        height: 2px;
+        height: 2.5px;
         display: block;
-        border-radius: 1px;
-        background-color: #222222;
+        // border-radius: 1px;
+        background-color: $color-white;
         margin: .23rem;
     }
 
 }
 
+@keyframes anim {
+    0% {
+        top: 0;
+        position: fixed;
+    }
+
+    100% {
+        top: 3rem;
+        position: fixed;
+    }
+}
+
 .fixed-navigation {
     position: fixed;
     top: 3rem;
+    animation: anim .25s ease-in-out;
 
     @include mq(extra-medium) {
         top: 0;

@@ -416,27 +416,39 @@ body {
   .navigation__button-open {
     width: 5rem;
     height: 4rem;
-    background-color: #ddd;
+    background-color: transparent;
     border: none;
     margin-right: 3rem;
-    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    transition: all .1s ease-in; }
     .navigation__button-open:focus {
       outline: none; }
+  .navigation__button-open:hover {
+    transform: translateY(-3px); }
+  .navigation__button-open:active {
+    transform: scale(1.1) translateY(-3px); }
   .navigation__icon-bar {
     width: 3rem;
-    height: 2px;
+    height: 2.5px;
     display: block;
-    border-radius: 1px;
-    background-color: #222222;
+    background-color: #FFFFFF;
     margin: .23rem; }
+
+@keyframes anim {
+  0% {
+    top: 0;
+    position: fixed; }
+  100% {
+    top: 3rem;
+    position: fixed; } }
 
 .fixed-navigation {
   position: fixed;
-  top: 3rem; }
+  top: 3rem;
+  animation: anim .25s ease-in-out; }
   @media (max-width: 750px) {
     .fixed-navigation {
       top: 0; } }
@@ -500,8 +512,10 @@ body {
       object-fit: cover;
       object-position: bottom right; }
   @media (max-width: 750px) {
-    .profile__details * {
-      text-align: center; } }
+    .profile__details {
+      margin-top: 4rem; }
+      .profile__details * {
+        text-align: center; } }
 
 .section-introduction {
   display: block;
