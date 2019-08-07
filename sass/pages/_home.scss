@@ -16,6 +16,11 @@
         background-position: right;
         width: 100%;
         height: 100vh;
+
+        @include mq(big-mobile) {
+            background-size: auto;
+            // background-position:  right;
+        }
     }
 
     &-profile {
