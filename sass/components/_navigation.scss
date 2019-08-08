@@ -195,6 +195,7 @@
 
     @include mq(extra-medium) {
         top: 0;
+        animation: none;
     }
 }
 

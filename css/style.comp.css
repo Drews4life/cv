@@ -451,7 +451,8 @@ body {
   animation: anim .25s ease-in-out; }
   @media (max-width: 750px) {
     .fixed-navigation {
-      top: 0; } }
+      top: 0;
+      animation: none; } }
 
 .open-navigation .navigation__list {
   height: auto; }
