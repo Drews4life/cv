@@ -511,7 +511,7 @@ body {
       height: 24.6rem;
       border-radius: 50%;
       object-fit: cover;
-      object-position: bottom right; }
+      object-position: top; }
   @media (max-width: 750px) {
     .profile__details {
       margin-top: 4rem; }
